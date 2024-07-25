@@ -1,0 +1,2 @@
+import './polyfills.server.mjs';
+import{Db as a,Lb as s,_ as i,lb as r,mb as o}from"./chunk-NINXSNKP.mjs";import"./chunk-5XUXGTUW.mjs";var m=(()=>{let e=class e{};e.\u0275fac=function(n){return new(n||e)},e.\u0275cmp=i({type:e,selectors:[["app-allorders"]],standalone:!0,features:[s],decls:4,vars:0,template:function(n,d){n&1&&(r(0,"p"),a(1,"allorders works!"),o(),r(2,"p"),a(3,"In here , we must display the all orders of user"),o())}});let t=e;return t})();export{m as AllordersComponent};

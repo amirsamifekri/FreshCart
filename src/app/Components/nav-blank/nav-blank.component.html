@@ -1,0 +1,85 @@
+<nav #navBar class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="home"
+      ><img src="freshcart-logo.svg" alt="logo page"
+    /></a>
+    <button
+      class="navbar-toggler d-lg-none"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#collapsibleNavId"
+      aria-controls="collapsibleNavId"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="home" routerLinkActive="active-link"
+            >Home</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="products"
+            routerLinkActive="active-link"
+            >Products</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="categories"
+            routerLinkActive="active-link"
+            >Categories</a
+          >
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto mt-2 mt-lg-0 align-items-center">
+        <!-- forget password -->
+        <li class="nav-item dropdown m-2">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-user fa-xl text-main"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" routerLink="/forgot-password"
+                >Forgot Password</a
+              >
+            </li>
+          </ul>
+        </li>
+        <!-- wishlist -->
+        <li role="button" routerLink="/Wishlist" class="position-relative m-2">
+          <i class="fa-solid fa-heart text-danger fa-2xl"></i>
+          <span class="badge bg-info">{{ wishlistLength }}</span>
+        </li>
+        <!-- cart -->
+        <li role="button" routerLink="/cart" class="position-relative m-2">
+          <i class="fa-solid fa-cart-shopping fa-2xl text-main"></i>
+          <span class="badge bg-info">{{ cartLength }}</span>
+        </li>
+
+        <li class="nav-item d-flex gap-2 mx-2 fs-5">
+          <i role="button" class="fab fa-facebook"></i>
+          <i role="button" class="fab fa-instagram"></i>
+          <i role="button" class="fab fa-twitter"></i>
+          <i role="button" class="fab fa-youtube"></i>
+          <i role="button" class="fab fa-tiktok"></i>
+        </li>
+        <li (click)="signOut()" class="nav-item">
+          <span role="button">SignOut</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

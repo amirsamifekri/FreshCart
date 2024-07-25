@@ -1,0 +1,126 @@
+// font-falmily
+@import url("https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@300&display=swap");
+// carousel
+@import "ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
+@import "ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
+// toastr
+@import "ngx-toastr/toastr";
+
+$main-color: #0aad0a;
+$light-color: #f0f3f2;
+$shadow: rgba(145, 158, 171, 0.2) 0px 2px 4px -1px,
+  rgba(145, 158, 171, 0.14) 0px 4px 5px 0px,
+  rgba(145, 158, 171, 0.12) 0px 1px 10px 0px;
+$rating-color: #ffc908;
+$main-transition: 0.8s;
+$font-family: "Encode Sans Expanded", sans-serif;
+.text-main {
+  color: $main-color;
+}
+
+.bg-main-light {
+  background-color: $light-color;
+}
+
+body {
+  font-family: $font-family;
+}
+
+.rating-color {
+  color: $rating-color;
+}
+
+.font-sm {
+  font-size: 11px;
+}
+
+.bg-main {
+  background-color: $main-color;
+}
+
+.text-main-light {
+  color: $light-color;
+}
+
+.main-btn {
+  background-color: $main-color;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 4px 8px;
+  &:disabled {
+    background-color: #6da86d;
+    color: #ffffff69;
+    cursor: not-allowed;
+  }
+}
+
+.product {
+  border: 1px solid $main-color;
+  border-radius: 5px;
+  padding: 4px;
+  box-shadow: $shadow;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  footer {
+    margin-top: auto;
+  }
+
+  .heart-icon {
+    position: absolute;
+    top: 15px;
+    right: -35px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.7s;
+    z-index: 99;
+  }
+
+  .main-btn {
+    transform: translateY(120%);
+    transition: 0.5s;
+    opacity: 0;
+  }
+  &:hover {
+    .main-btn {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+    .heart-icon {
+      right: 15px;
+    }
+  }
+}
+
+.active-link {
+  color: #fff;
+  background-color: $main-color;
+  border-radius: 5px;
+}
+
+// handle scroll bar
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: $light-color;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $main-color;
+}
+
+// set style for badge navbar
+li .badge {
+  position: absolute;
+  top: -50%;
+  right: -30%;
+  font-size: 13px;
+  font-weight: bolder;
+}

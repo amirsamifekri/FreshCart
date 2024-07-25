@@ -1,0 +1,56 @@
+@if(products.length){
+<section class="py-4">
+  <h2>Popular Products</h2>
+  <div class="row g-4 justify-content-center">
+    @for (item of products ; track $index ) {
+    <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2">
+      <div class="product h-100">
+        <!-- heart -->
+        <i
+          (click)="removeFromWishlist(item._id!)"
+          class="fa-heart fs-3 heart-icon"
+          [ngClass]="
+            idsOfProductsYouLikedThem.includes(item._id!)
+              ? 'fa-solid'
+              : 'fa-regular'
+          "
+        ></i>
+        <header role="button" [routerLink]="['/product-details', item._id]">
+          <img
+            class="w-100"
+            [src]="item.imageCover"
+            [alt]="item.title"
+            [title]="item.title"
+          />
+          <h3 class="h6">{{ item.title | cutText : 3 }}</h3>
+          <h4 class="h6 text-main">{{ item.category.name }}</h4>
+          <div class="d-flex align-items-center justify-content-between">
+            <span class="small">{{ item.price | currency : " EGP " }}</span>
+            <p class="mb-0">
+              @for (star of [1,2,3,4,5]; track $index) {
+
+              <i
+                [class.rating-color]="star <= item.ratingsAverage"
+                class="fas fa-star"
+              ></i>
+              }
+              <span class="text-muted ms-1">{{ item.ratingsAverage }}</span>
+            </p>
+          </div>
+        </header>
+        <footer>
+          <button
+            #addBtn
+            (click)="addToCart(item._id, addBtn)"
+            class="main-btn w-100 py-2"
+          >
+            +Add To Cart
+          </button>
+        </footer>
+      </div>
+    </div>
+    }
+  </div>
+</section>
+
+}

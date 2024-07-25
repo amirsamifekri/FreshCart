@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="home"
+      ><img src="freshcart-logo.svg" alt="logo page"
+    /></a>
+    <button
+      class="navbar-toggler d-lg-none"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#collapsibleNavId"
+      aria-controls="collapsibleNavId"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="navbar-nav ms-auto mt-2 mt-lg-0 align-items-center">
+        <li class="nav-item d-flex gap-2 me-2 fs-5">
+          <i role="button" class="fab fa-facebook"></i>
+          <i role="button" class="fab fa-instagram"></i>
+          <i role="button" class="fab fa-twitter"></i>
+          <i role="button" class="fab fa-youtube"></i>
+          <i role="button" class="fab fa-tiktok"></i>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="login" routerLinkActive="active-link"
+            >Login</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="register"
+            routerLinkActive="active-link"
+            >Register</a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
